@@ -10,7 +10,12 @@ export default defineConfig({
       name: "app",
       remotes: {
         remoteApp: "http://localhost:5001/assets/remoteEntry.js",
+        sbhEmpty: {
+          external: `new Promise(resolve=>resolve('http://localhost:4177/assets/remoteEntry.js'))`,
+          externalType: "promise",
+        },
       },
+
       shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],

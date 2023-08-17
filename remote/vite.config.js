@@ -7,10 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "remote_app",
+      name: "remoteApp",
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App",
+        "./Empty": "./src/Empty",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),

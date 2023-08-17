@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RemoteApp from "remoteApp/App";
 import Home from "./pages";
+import Remote from "./pages/apps/remote";
 
 const pages = import.meta.glob("./pages/**/*.jsx", { eager: true });
 
@@ -26,7 +26,7 @@ for (const path of Object.keys(pages)) {
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/apps/*", element: <RemoteApp /> },
+  { path: "/apps/*", element: <Remote /> },
 ]);
 
 const App = () => {
