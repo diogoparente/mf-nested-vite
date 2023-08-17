@@ -1,0 +1,19 @@
+{
+  "name": "@module-federation/react-vite-with-nested-pagination",
+  "author": "diogoparente",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pnpm --parallel build && pnpm --parallel preview",
+    "build": "pnpm --parallel --filter \"./**\" build",
+    "serve": "pnpm --parallel --filter \"./**\" preview",
+    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
+    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+    "dev:hosts": "pnpm --filter \"./host\" dev",
+    "stop": "kill-port --port 5000,5001"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.2.3",
+    "kill-port": "^2.0.1"
+  }
+}
